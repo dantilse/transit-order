@@ -1,0 +1,11 @@
+.navbar {
+  > .container {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}

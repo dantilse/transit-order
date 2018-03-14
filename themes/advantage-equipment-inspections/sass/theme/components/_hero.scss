@@ -1,0 +1,49 @@
+//  ---------------------------------------------------------------------------
+//  Hero Component
+//  ---------------------------------------------------------------------------
+#homepage-wrapper {
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35vh;
+  min-height: 380px;
+  background: {
+    image: url('https://source.unsplash.com/collection/353649/1600x900');
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: {
+      image: linear-gradient(to right, rgba($black,.65), rgba($black,.25));
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 300px;
+  }
+
+  &-contents {
+    position: relative;
+    width: 100%;
+    color: $white;
+  }
+
+  &-title {
+    position: relative;
+  }
+
+
+  &-text { }
+}

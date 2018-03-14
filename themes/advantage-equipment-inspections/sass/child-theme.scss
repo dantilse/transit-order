@@ -1,0 +1,87 @@
+@import "theme/child_theme_variables";  // Copy of Bootstrap variables for over-writing
+@import "assets/bootstrap4";// Loads Bootstrap4, comment out un-necessary sections
+@import "assets/understrap";// Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+@import "../../understrap/sass/theme/contact-form7";// Loads some basic styling for contact form 7 plugin
+
+// Optional files - If you don't use the corresponding scripts/fonts, comment 'em out
+@import "assets/font-awesome"; // Font Awesome Icon font
+@import "assets/underscores"; // Underscores media styles
+
+//	Add WooCommerce custom color styles
+@import '../woocommerce/assets/css/woocommerce.scss';
+
+// Any additional imported files //
+// @import "theme/child_theme";  // Add your styles into this file
+
+//  Custom Theme Styles
+//  ---------------------------------------------------------------------------
+
+//  Theme Mixins
+@import "theme/mixins";
+
+//  Elements
+@import "theme/elements/typography";
+
+//  Components
+//  ---------------------------------------------------------------------------
+
+// Header
+@import "theme/components/header";
+
+//  Hero Component
+@import "theme/components/hero";
+
+//  Reports List
+@import "theme/components/reports-list";
+
+//  How it Works (Process)
+@import "theme/components/how-it-works";
+
+//  Locations
+@import "theme/components/locations";
+
+//  Why Advantage
+@import "theme/components/advantage";
+
+//  Get Started
+@import "theme/components/get-started";
+
+//  Footer
+@import "theme/components/footer";
+
+
+
+
+//  404 page
+#wrapper-404 {
+  flex-grow: 1;
+}
+.error-404-title {
+  padding: {
+    top: 10vw;
+    bottom: 10vw;
+  }
+  font: {
+    size: 20vw;
+    weight: 900;
+  }
+  text-align: center;
+}
+
+//  Static Footer
+//  move this to an include file once they are set up
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .logged-in & {
+    min-height: calc(100vh - 32px); // subtract height of admin bar for better display
+  }
+
+  &-wrapper {
+    flex-grow: 1;
+  }
+}
+
+#woocommerce-wrapper { flex-grow: 1; }

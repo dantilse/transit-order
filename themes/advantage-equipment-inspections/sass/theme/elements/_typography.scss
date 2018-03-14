@@ -1,0 +1,22 @@
+.section-title {
+  position: relative;
+  padding-bottom: .5em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 4em;
+    height: 4px;
+    background: $brand-primary;
+  }
+
+  &.text-center {
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

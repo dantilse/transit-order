@@ -1,0 +1,138 @@
+//  ---------------------------------------------------------------------------
+//  Reports List
+//  ::  Component Specific Variables
+//  ::  Container
+//  ::  Column / Item
+//  ::  Image
+//  ::  Title
+//  ::  Description
+//  ::  Link
+//  ---------------------------------------------------------------------------
+
+
+//  Variables
+//  -----------------------------------
+$line-weight        : 4px;
+$color              : $brand-primary;
+
+
+.section-top {
+  padding: 2em 0;
+}
+
+.reports {
+  // container
+  &-list { }
+
+  //  column
+  &-item {
+    margin-bottom: 1em;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 2em;
+    }
+  }
+
+  &-image {
+    position: relative;
+    img { }
+  }
+
+  // &-overlay {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 0;
+  //   bottom: 50%;
+  //   left: 0;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   height: 0;
+  //   overflow: hidden;
+  //   background: rgba($black,.5);
+  //   transition: all 400ms ease;
+  //
+  //   .reports-image:hover & {
+  //     top: 0;
+  //     bottom: 0;
+  //     height: 100%;
+  //   }
+  // }
+
+  &-button {
+    display: block;
+    color: $white;
+    border: 2px solid $white;
+
+    &:hover {
+      color: $white;
+      background: rgba($white,.2);
+    }
+  }
+
+  &-title {
+    color: $brand-primary;
+    text-align: center;
+  }
+
+  &-description {
+    text-align: center;
+
+    > p {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &-price {
+    font: {
+      weight: 700;
+      size: 1.25em;
+    }
+    text-align: center;
+  }
+
+  &-btn {
+    text-align: center;
+  }
+
+  &-link {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 2em;
+      right: 2em;
+      display: block;
+      height: $line-weight;
+      background: $color;
+      transform: translateY(-50%);
+      transition: all 150ms ease;
+    }
+
+    &:hover {
+      &:before {
+        // left: 1em;
+        // right: 1em;
+      }
+    }
+
+    a {
+      @include cta;
+      position: relative;
+      display: inline-block;
+      padding: .5em 1em;
+      color: $color;
+      background: $white;
+      border: $line-weight solid $color;
+      transition: background-color 150ms ease;
+
+      &:hover {
+        // background: lighten($brand-primary, 75);
+      }
+    }
+  }
+}

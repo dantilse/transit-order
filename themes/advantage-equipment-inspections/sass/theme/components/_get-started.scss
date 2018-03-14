@@ -1,0 +1,41 @@
+//  ---------------------------------------------------------------------------
+//  Get Started
+//  ---------------------------------------------------------------------------
+
+.get-started {
+  position: relative;
+  padding: 4em 0;
+  background: {
+    color: $brand-primary-1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 465px);
+    display: none;
+    width: 290px;
+    height: 370px;
+    background: {
+      image: url(../img/inspector.png);
+      // position: calc(50% - (#{$screen-lg} / 2)) bottom;
+      position: center bottom;
+      repeat: no-repeat;
+      size: 250px auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: calc(50% - 555px);
+      width: 350px;
+      height: 400px;
+      background: {
+        size: 280px auto;
+      }
+    }
+  }
+}
